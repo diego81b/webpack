@@ -1,6 +1,6 @@
-# expense-report
+# webpack-starter
 
-> Expense Report
+> webpack-starter
 
 ## Build Setup
 

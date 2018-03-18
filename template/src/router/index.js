@@ -4,7 +4,6 @@ import Login from '@/components/Login';
 import Home from '@/components/Home';
 import Admin from '@/components/Admin';
 import User from '@/components/User';
-import RegisterDetail from '@/components/Expense/RegisterDetail';
 import authorization from '@/auth';
 
 Vue.use(Router);
@@ -34,15 +33,6 @@ const router = new Router({
       path: "/user",
       name: "User",
       component: User,
-      meta: {
-        auth: true,
-        roles: ["USER"]
-      }
-    },
-    {
-      path: "/expenseReport",
-      name: "RegisterDetail",
-      component: RegisterDetail,
       meta: {
         auth: true,
         roles: ["USER"]

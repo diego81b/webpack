@@ -1,8 +1,8 @@
 {
-  "name": "expense-report",
+  "name": "webpack-starter",
   "version": "1.0.0",
-  "description": "Expense Report",
-  "author": "Diego Baldeschi <diego.baldeschi@comm-it.it>",
+  "description": "webpack-starter",
+  "author": "Diego Baldeschi <baldeschidiego@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -17,7 +17,6 @@
     "axios": "^0.17.1",
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "latest",
-    "chart.js": "^2.7.1",
     "font-awesome": "4.7.0",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.5",
@@ -27,7 +26,6 @@
     "qs": "^6.5.1",
     "vee-validate": "^2.0.5",
     "vue": "^2.5.2",
-    "vue-chartjs": "^3.2.1",
     "vue-loaders": "^2.0.0",
     "vue-moment": "^3.2.0",
     "vue-notifications": "^0.9.0",

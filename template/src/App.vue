@@ -1,34 +1,42 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    {{#router}}
-    <router-view/>
-    {{else}}
-    <HelloWorld/>
-    {{/router}}
+    <custom-header></custom-header>
+    <div class="container-fluid" id="container">
+      <router-view></router-view>
+        <div class="loading" v-if="isLoading">
+          <ball-scale-ripple-multiple-loader color="#e83e8c" size="65px"></ball-scale-ripple-multiple-loader>
+        </div>
+    </div>
+    <!-- <custom-footer></custom-footer> -->
   </div>
 </template>
 
 <script>
-{{#unless router}}
-import HelloWorld from './components/HelloWorld'
+ import CustomHeader from '@/components/Header';
+  import CustomFooter from '@/components/Footer';
 
-{{/unless}}
-export default {
-  name: 'App'{{#router}}{{else}},
-  components: {
-    HelloWorld
-  }{{/router}}
-}
+  export default {
+    name: "app",
+    data() {
+      return {
+      };
+    },
+    computed: {
+        isLoading() {
+          return this.$store.getters.isLoading;
+        }
+    },
+    components: {
+      CustomHeader,
+      CustomFooter
+    }
+  };
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import 'theme/variables';
+  @import 'theme/bootswatch';
+  @import 'theme/app';
+  @import "~font-awesome/scss/font-awesome";
+  @import '../node_modules/bootstrap/scss/bootstrap.scss';
 </style>

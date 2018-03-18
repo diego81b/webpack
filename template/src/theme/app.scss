@@ -1,0 +1,38 @@
+#container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+body {
+    @extend .text-uppercase;
+}
+
+.dropdown .dropdown-menu .dropdown-item:focus {
+    outline: none;
+}
+
+/* Absolute Center Spinner */
+.loading {
+    position: fixed !important;
+    z-index: 999;
+    height: 7em;
+    width: 7em;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+    content: '';
+    display: block;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+}
